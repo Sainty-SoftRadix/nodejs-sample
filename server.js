@@ -16,6 +16,7 @@ io.on('connection', (socket) => {
     });
 });
 io.on("connection", (socket) => {
+    //Handle all socket here
     socket.on("chat message", (messageData) => {
         console.log("messageData :", JSON.stringify(messageData));
         socket.broadcast.emit("new_message", { ...messageData })
