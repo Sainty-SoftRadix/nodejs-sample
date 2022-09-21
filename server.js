@@ -16,6 +16,7 @@ io.on('connection', (socket) => {
     });
 });
 //Handles the Messages and emits it to the users
+
 io.on("connection", (socket) => {
     socket.on("chat message", (messageData) => {
         console.log("messageData :", JSON.stringify(messageData));
