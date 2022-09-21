@@ -21,7 +21,6 @@ io.on("connection", (socket) => {
         socket.broadcast.emit("new_message", { ...messageData })
     })
 })
-
 server.listen(3003, () => {
     //server running at port 3003
     console.log("Server running at Port 3003");
